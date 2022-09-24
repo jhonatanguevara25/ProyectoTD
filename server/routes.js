@@ -22,8 +22,7 @@ routes.post("/", (req, res) => {
   //INSERT INTO bodeguero (idAdmin, nombreCompleto, correo, password, suscripcion) VALUES
   //(1, 'Jhonatan Guevara Ames', 'jhony.ames25@gmail.com', '123', 'FREE'),
   // "idAdmin":1,"nombreCompleto":"Jhonatan Guevara Ames","correo":"jhony.ames25@gmail.com","password":"123","suscripcion":"FREE"
-  const { idAdmin, nombreCompleto, correo, password, suscripcion } =
-    req.body.bodeguero;
+  const { idAdmin, nombreCompleto, correo, password, suscripcion } = req.body;
   db(
     `INSERT INTO [dbo].[bodeguero] (idAdmin, nombreCompleto, correo, password, suscripcion) VALUES (${idAdmin}, '${nombreCompleto}', '${correo}', '${password}', '${suscripcion}')`,
     (record) => {
@@ -41,7 +40,7 @@ routes.delete("/:id", (req, res) => {
 
 routes.put("/:id", (req, res) => {
   let id = req.params.id;
-  const { nombreCompleto, correo, password, suscripcion } = req.body.bodeguero;
+  const { nombreCompleto, correo, password, suscripcion } = req.body;
 
   let str = "";
 
