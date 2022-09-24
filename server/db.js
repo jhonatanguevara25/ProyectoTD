@@ -1,12 +1,6 @@
 
 // Import the mssql package
 var sql = require("mssql");
-const express = require('express')
-
-const routes = require('./routes')
-
-const app = express()
-app.set('port', process.env.PORT || 9000)
 
 // Create a configuration object for our Azure SQL connection parameters
 var dbConfig = {

@@ -11,7 +11,7 @@ app.use(express.json())
 
 // routes -------------------------------------------
 app.get('/', (req, res)=>{
-    res.send("hello")
+    res.send("Api funcionando")
 })
 
 app.use('/api/bodeguero', routes)

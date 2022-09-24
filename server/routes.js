@@ -3,8 +3,7 @@ const { db } = require("./db.js");
 const routes = express.Router();
 
 routes.get("/", (req, res) => {
-  console.log(req);
-  db("SELECT TOP 20 * FROM [dbo].[bodeguero];", (record) => {
+  db("SELECT * FROM [dbo].[bodeguero];", (record) => {
     const r = record.recordsets;
     res.send(r);
   });
