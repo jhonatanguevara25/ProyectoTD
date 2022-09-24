@@ -24,7 +24,7 @@ connection.on("connect", function (err) {
 });
 
 connection.connect();
-
+// JAJA :V
 //var Request = require("tedious").Request;
 //var TYPES = require("tedious").TYPES;
 
