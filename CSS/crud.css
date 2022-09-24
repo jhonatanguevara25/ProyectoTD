@@ -1,0 +1,22 @@
+#tabla-bodeguero{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 80px;
+}
+
+table .header{
+    background: rgb(62, 48, 63);
+    color: #ffffff;
+}
+
+table tr td{
+    text-align: center;
+    width: 200px;
+
+    border: solid   1px black;
+}
+
+tr .tdButtom{
+    width:70px;
+}
