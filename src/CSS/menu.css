@@ -1,0 +1,74 @@
+* {
+  font-family: "Segoe UI", Roboto;
+}
+
+.menu {
+  width: 126px;
+  height: 100vh;
+  background: linear-gradient(0.17deg, #8f589f 21.39%, #3e303f 76.12%);
+}
+
+.size_logo {
+  border-radius: 5px;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.size_item {
+  border-radius: 5px;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.size_item:hover {
+  background-color: #8f589f;
+}
+
+.size_item_selected {
+  border-radius: 5px;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #8f589f;
+  margin-bottom: 20px;
+}
+
+/* TITULO */
+.titulo {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 58px;
+  color: #000000;
+}
+
+.separador {
+  border: 1px solid #000000;
+}
+
+.user {
+  width: 34px;
+  height: 34px;
+  margin-top: 8px;
+  cursor: pointer;
+  cursor: hand;
+}
+
+.probando:hover {
+  font-weight: bold;
+}
+
+.encabezado {
+  position: absolute;
+  left: 150px;
+  top: 20px;
+}

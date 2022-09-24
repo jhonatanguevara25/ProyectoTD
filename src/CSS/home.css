@@ -1,0 +1,604 @@
+/* Desktop - 1 */
+
+* {
+  margin: 0;
+
+  font-family: "Segoe UI", Roboto;
+}
+
+body {
+  background: #cdcbcb;
+}
+/*****************************************************************************************************/
+/* MenuArriba */
+/* HEADER */
+.logo {
+  margin-top: 15px;
+  height: 75px;
+  flex-grow: 0;
+}
+header {
+  z-index: 1;
+  background: rgb(62, 48, 63);
+  opacity: 0.8;
+  color: #ffffff;
+  padding: 15px;
+  padding: 5px 40px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 120px;
+}
+
+nav {
+  text-align: right;
+}
+
+.container-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+nav ul {
+  margin: 0;
+  margin-right: 70px;
+  padding: 0;
+  list-style: none;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  display: block;
+  padding: 10px 50px;
+  transition: all 0.5s linear;
+  border-radius: 5px;
+}
+nav ul li a:hover {
+  color: #fff;
+  background-color: #8f589f;
+}
+/*******************************************************************************************************************/
+
+.fondo1 {
+  margin: 0px;
+  width: 100%;
+  left: 0px;
+  top: 0px;
+}
+
+.bene1 {
+  text-align: center;
+  z-index: -1;
+  width: 430px;
+  height: 504px;
+
+  /* primary */
+  background: #1e2125;
+  color: #fff;
+  /* Shadow */
+  box-shadow: 0px 6px 14px rgba(121, 126, 135, 0.5);
+}
+
+.bene2 {
+  text-align: center;
+  z-index: -1;
+  width: 430px;
+  height: 504px;
+  /* primary */
+  background: #8f589f;
+  color: #fff;
+  /* Shadow */
+  box-shadow: 0px 6px 14px rgba(121, 126, 135, 0.5);
+}
+
+.bene3 {
+  text-align: center;
+  z-index: -1;
+  width: 430px;
+  height: 504px;
+  /* primary */
+  background: #ffffff;
+  color: #1e2125;
+  /* Shadow */
+  box-shadow: 0px 6px 14px rgba(121, 126, 135, 0.5);
+  margin-bottom: auto;
+}
+
+/*******************************************************************************************************************/
+.describeImg {
+  height: 100px;
+  margin-top: 60px;
+}
+
+.describeTit {
+  width: 300px;
+  margin: auto;
+  margin-top: 10px;
+  font-size: 36px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.descriText {
+  width: 325px;
+  margin: auto;
+  margin-top: 8px;
+  font-size: 18px;
+  font-weight: 400;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+/*******************************************************************************************************************/
+.intro {
+  position: relative;
+}
+
+.introImagen {
+  width: 100%;
+  left: 70px;
+  top: 1551px;
+}
+
+.introT {
+  width: 640px;
+  height: 227px;
+  margin: 145px 70px 61px 20px;
+  font-size: 24px;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000;
+}
+.introT .introTit {
+  font-size: 38px;
+  font-weight: bold;
+}
+
+.introT .introText {
+  font-weight: bold;
+}
+
+.introBoton {
+  width: 220px;
+  height: 64px;
+  margin: 61px 8px 101px 20px;
+  padding: 15px 48px 16px 49px;
+  border-radius: 12px;
+  background-color: #1e2125;
+
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 33px;
+  /* identical to box height */
+  color: #ffffff;
+}
+
+.introBoton:hover {
+  background-color: #ff8e46;
+}
+
+/*******************************************************************************************************************/
+.empieza {
+  width: 100%;
+  text-align: center;
+}
+
+.empEncabezado1 {
+  height: 28px;
+  margin-top: 85px;
+
+  /* Body 1 */
+
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+
+  color: #ffffff;
+}
+
+.empEncabezado2 {
+  width: 360px;
+  margin: auto;
+  margin-top: 50px;
+
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 45px;
+
+  color: #ffffff;
+}
+
+.empText {
+  /* Satisface tus necesidades financieras */
+  width: 400px;
+  margin: auto;
+  margin-top: 40px;
+
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+
+  color: #ffffff;
+  opacity: 0.5;
+}
+
+.empBoton {
+  width: 220px;
+  height: 64px;
+  margin: 61px 8px 101px 20px;
+  padding: 15px 48px 16px 49px;
+  border-radius: 12px;
+  background-color: #ff8e46;
+
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 33px;
+  /* identical to box height */
+  color: #ffffff;
+}
+
+.empBoton:hover {
+  background: #ffffff;
+  color: #ff8e46;
+}
+
+/*******************************************************************************************************************/
+.emp1 {
+  text-align: center;
+  z-index: -1;
+  width: 430px;
+  height: 335px;
+
+  /* primary */
+  background: #1e2125;
+  color: #fff;
+  /* Shadow */
+  box-shadow: 0px 6px 14px rgba(121, 126, 135, 0.5);
+  padding-top: 74px;
+}
+.emp2 {
+  text-align: center;
+  z-index: -1;
+  width: 430px;
+  height: 335px;
+  /* primary */
+  background: #8f589f;
+  color: #fff;
+  /* Shadow */
+  box-shadow: 0px 6px 14px rgba(121, 126, 135, 0.5);
+  padding-top: 74px;
+}
+
+.emp3 {
+  text-align: center;
+  z-index: -1;
+  width: 430px;
+  height: 335px;
+  /* primary */
+  background: #ffffff;
+  color: #1e2125;
+  /* Shadow */
+  box-shadow: 0px 6px 14px rgba(121, 126, 135, 0.5);
+  margin-bottom: auto;
+  padding-top: 74px;
+}
+/*******************************************************************************************************************/
+
+.planCla {
+  text-align: center;
+  width: 310px;
+  height: 640px;
+  margin: 20px 10px;
+  padding: 70px 70px 85x 70px;
+  border-radius: 12px;
+  box-shadow: 0 6px 14px 0 rgba(121, 126, 135, 0.5);
+  background-color: #fff;
+  color: #000;
+}
+
+.planOsc {
+  text-align: center;
+  width: 310px;
+  height: 640px;
+  margin: 40px 10px;
+  padding: 40px 70px 85x 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 14px 0 rgba(121, 126, 135, 0.5);
+  background-color: #1e2125;
+  color: #fff;
+}
+
+.planT {
+  width: 154px;
+  height: 399px;
+
+  font-size: 18px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+}
+
+.planT .planName {
+  margin-top: 75px;
+  font-size: 38px;
+  font-weight: bold;
+  line-height: 0.74;
+}
+
+.planT .planCosto1 {
+  margin-top: 50px;
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 0.74;
+  color: #8f589f;
+}
+
+.planT .planCosto2 {
+  font-size: 20px;
+  line-height: 1.25;
+  color: #8f589f;
+  margin-bottom: 50px;
+}
+/*******************************************************************************************************************/
+.encaServ {
+  margin-top: 70px;
+  font-size: 24px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+
+  text-align: center;
+  color: #8f589f;
+}
+.titServ {
+  /* Header 1 */
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 45px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  /* identical to box height */
+
+  text-align: center;
+
+  color: #000000;
+}
+.servicios {
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 70px;
+  padding: auto;
+}
+
+.servlink {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  text-decoration: none;
+  color: #000000;
+}
+
+.servlink:hover {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  text-decoration: none;
+  color: #8f589f;
+}
+/*******************************************************************************************************************/
+.testimonio {
+  background-image: url("imagenes/Home/Fondo3.png");
+  height: 708px;
+}
+
+.fotoTest {
+  margin: 30px 0 7px 0;
+}
+.cardTestimonio {
+  width: 422px;
+  height: 378px;
+
+  margin: auto;
+  margin-top: 30px;
+  background: #1e2125;
+  text-align: center;
+}
+
+.text-style-1 {
+  font-weight: 600;
+  color: #fff;
+  font-size: 24px;
+}
+.text-style-2 {
+  font-weight: 600;
+  font-size: 14px;
+  color: #8f589f;
+}
+.text-style-3 {
+  font-weight: 400;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+/*******************************************************************************************************************/
+.number {
+  padding: 40px;
+  background-color: #ff8e46;
+  color: #fff;
+  text-align: center;
+
+  font-size: 24px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.numero1 {
+  width: 300px;
+  font-size: 64px;
+  font-weight: bold;
+}
+
+.numero2 {
+  width: 300px;
+  font-weight: 400;
+}
+
+/*******************************************************************************************************************/
+
+.foot1 {
+  width: 100%;
+  left: 0px;
+  padding: 100px;
+
+  background-color: #1e2125;
+}
+
+.f1p1 {
+  display: inline-block;
+  width: 349px;
+  margin-left: 160px;
+}
+
+.f1p2 {
+  display: inline-block;
+  width: 349px;
+  margin-left: 300px;
+}
+
+.logoFoot {
+  height: 120px;
+}
+
+.textFoot {
+  font-size: 24px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #747475;
+}
+
+.titFoot {
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 42px;
+}
+
+.foot2 {
+  width: 100%;
+  padding: 10px;
+  left: 0px;
+  padding-left: 100px;
+  background: #0d0f11;
+}
+
+.foot2 ul {
+  margin-right: 70px;
+  margin-bottom: 70px;
+  padding: 0;
+  list-style: none;
+}
+
+.foot2 ul li {
+  display: inline-block;
+}
+
+.foot2 ul li a {
+  text-decoration: none;
+  color: #747475;
+  display: block;
+  padding: 10px 50px;
+  transition: all 0.5s linear;
+  border-radius: 5px;
+}
+
+.foot2 ul li a:hover {
+  background-color: #000000;
+}
+
+/*******************************************************************************************************************/
+.documento {
+  margin: auto;
+  margin-top: 65px;
+  margin-bottom: 65px;
+  width: 85%;
+  left: 144px;
+  top: 368px;
+
+  /* Dark Purple */
+
+  padding: 60px 40px;
+  border: 2px solid #3e303f;
+  border-radius: 12px;
+}
+
+.encDoc {
+  color: #6a3879;
+  margin-left: 10%;
+
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 58px;
+}
+
+.docBoton {
+  width: 220px;
+  height: 64px;
+  margin: 5px 0px 70px 0px;
+  padding: 15px 48px 16px 49px;
+  border-radius: 12px;
+  background-color: #ff8e46;
+
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 33px;
+  /* identical to box height */
+  color: #ffffff;
+}
+
+.docBoton:hover {
+  background-color: #3e303f;
+}
+/*******************************************************************************************************************/
+.imgContacta {
+  width: 100%;
+}
+
+.iconoC {
+  height: 50px;
+}
