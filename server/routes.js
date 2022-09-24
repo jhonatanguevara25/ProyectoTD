@@ -9,6 +9,15 @@ routes.get("/", (req, res) => {
   });
 });
 
+//SELECT según ID
+routes.get("/:id", (req, res) => {
+  let id = req.params.id;
+  db(`SELECT * FROM [dbo].[bodeguero] WHERE idAdmin = ${id};`, (record) => {
+    const r = record.recordsets;
+    res.send(r);
+  });
+});
+
 routes.post("/", (req, res) => {
   //INSERT INTO bodeguero (idAdmin, nombreCompleto, correo, password, suscripcion) VALUES
   //(1, 'Jhonatan Guevara Ames', 'jhony.ames25@gmail.com', '123', 'FREE'),
