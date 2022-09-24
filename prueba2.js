@@ -16,11 +16,13 @@ var config = {
     database: "yarashop", //update me
   },
 };
+
 var connection = new Connection(config);
+
 connection.on("connect", function (err) {
   // If no error, then good to proceed.
   console.log("Connected");
-  executeStatement();
+  cosaRaraFio();
 });
 
 connection.connect();
@@ -28,14 +30,15 @@ connection.connect();
 //var Request = require("tedious").Request;
 //var TYPES = require("tedious").TYPES;
 
-function executeStatement() {
-  request = new Request("SELECT TOP 20 * FROM [dbo].[Entries];", function (
+function cosaRaraFio() {
+  request = new Request("SELECT TOP 20 * FROM [dbo].[bodeguero];", function (
     err
   ) {
     if (err) {
       console.log(err);
     }
   });
+
   var result = "";
   request.on("row", function (columns) {
     // Es un bucle por cada fila que tenga la sentencia
@@ -47,9 +50,11 @@ function executeStatement() {
     console.log(result + "\n"); // Se imprime cada línea.
     result = "";
   });
+
   // Close the connection after the final event emitted by the request, after the callback passes
   request.on("requestCompleted", function (rowCount, more) {
     connection.close();
   });
+
   connection.execSql(request);
 }
