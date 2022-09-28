@@ -8,7 +8,7 @@ routes.get("/", (req, res) => {
     res.send(r);
   });
 });
-
+//ARNOLD OLI
 //SELECT según ID
 routes.get("/:id", (req, res) => {
   let id = req.params.id;
