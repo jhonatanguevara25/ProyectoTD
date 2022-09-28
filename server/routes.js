@@ -17,7 +17,7 @@ routes.get("/:id", (req, res) => {
     res.send(r);
   });
 });
-
+//Hola jobem
 routes.post("/", (req, res) => {
   //INSERT INTO bodeguero (idAdmin, nombreCompleto, correo, password, suscripcion) VALUES
   //(1, 'Jhonatan Guevara Ames', 'jhony.ames25@gmail.com', '123', 'FREE'),
