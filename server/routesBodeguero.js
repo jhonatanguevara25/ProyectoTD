@@ -22,9 +22,9 @@ routes.post("/", (req, res) => {
   //INSERT INTO bodeguero (idAdmin, nombreCompleto, correo, password, suscripcion) VALUES
   //(1, 'Jhonatan Guevara Ames', 'jhony.ames25@gmail.com', '123', 'FREE'),
   // "idAdmin":1,"nombreCompleto":"Jhonatan Guevara Ames","correo":"jhony.ames25@gmail.com","password":"123","suscripcion":"FREE"
-  const { idAdmin, nombreCompleto, correo, password, suscripcion } = req.body;
+  const { nombreCompleto, correo, password, suscripcion } = req.body;
   db(
-    `INSERT INTO [dbo].[bodeguero] (idAdmin, nombreCompleto, correo, password, suscripcion) VALUES (${idAdmin}, '${nombreCompleto}', '${correo}', '${password}', '${suscripcion}')`,
+    `INSERT INTO [dbo].[bodeguero] (nombreCompleto, correo, password, suscripcion) VALUES ('${nombreCompleto}', '${correo}', '${password}', '${suscripcion}')`,
     (record) => {
       res.send(record);
     }
