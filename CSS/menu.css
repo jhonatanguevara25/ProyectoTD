@@ -1,74 +1,135 @@
-* {
-  font-family: "Segoe UI", Roboto;
+/*****************************************************************************************************/
+/* MenuArriba */
+/* HEADER */
+.logo {
+  margin-top: 15px;
+  height: 75px;
+  flex-grow: 0;
+}
+header {
+  z-index: 1;
+  background: rgb(62, 48, 63);
+  opacity: 0.8;
+  color: #ffffff;
+  padding: 15px;
+  padding: 5px 40px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 120px;
 }
 
-.menu {
-  width: 126px;
-  height: 100vh;
-  background: linear-gradient(0.17deg, #8f589f 21.39%, #3e303f 76.12%);
+nav {
+  text-align: right;
 }
 
-.size_logo {
-  border-radius: 5px;
-  width: 90px;
-  height: 90px;
+.container-nav {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
 }
 
-.size_item {
+header a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+nav ul {
+  margin: 0;
+  margin-right: 70px;
+  padding: 0;
+  list-style: none;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  display: block;
+  padding: 10px 50px;
+  transition: all 0.5s linear;
   border-radius: 5px;
-  width: 90px;
-  height: 90px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20px;
 }
-
-.size_item:hover {
+nav ul li a:hover {
+  color: #fff;
   background-color: #8f589f;
 }
+/*******************************************************************************************************************/
+.foot1 {
+  width: 100%;
+  left: 0px;
+  padding: 100px;
 
-.size_item_selected {
-  border-radius: 5px;
-  width: 90px;
-  height: 90px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #8f589f;
-  margin-bottom: 20px;
+  background-color: #1e2125;
 }
 
-/* TITULO */
-.titulo {
+.f1p1 {
+  display: inline-block;
+  width: 349px;
+  margin-left: 160px;
+}
+
+.f1p2 {
+  display: inline-block;
+  width: 349px;
+  margin-left: 300px;
+}
+
+.logoFoot {
+  height: 120px;
+}
+
+.textFoot {
+  font-size: 24px;
   font-weight: 600;
-  font-size: 48px;
-  line-height: 58px;
-  color: #000000;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #747475;
 }
 
-.separador {
-  border: 1px solid #000000;
+.titFoot {
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 42px;
 }
 
-.user {
-  width: 34px;
-  height: 34px;
-  margin-top: 8px;
-  cursor: pointer;
-  cursor: hand;
+.foot2 {
+  width: 100%;
+  padding: 10px;
+  left: 0px;
+  padding-left: 100px;
+  background: #0d0f11;
 }
 
-.probando:hover {
-  font-weight: bold;
+.foot2 ul {
+  margin-right: 70px;
+  margin-bottom: 70px;
+  padding: 0;
+  list-style: none;
 }
 
-.encabezado {
-  position: absolute;
-  left: 150px;
-  top: 20px;
+.foot2 ul li {
+  display: inline-block;
+}
+
+.foot2 ul li a {
+  text-decoration: none;
+  color: #747475;
+  display: block;
+  padding: 10px 50px;
+  transition: all 0.5s linear;
+  border-radius: 5px;
+}
+
+.foot2 ul li a:hover {
+  background-color: #000000;
 }
