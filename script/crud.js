@@ -1,32 +1,18 @@
 //Inicializando la tabla
 const tablaBodeguero = document.getElementById("tabla-bodeguero");
-<<<<<<< HEAD
 tablaBodeguero.innerHTML = "";
 tablaBodeguero.innerHTML +=
-  "<table><tr class='header'><td style='width: 100px;'>Id</td><td>Nombre Completo</td><td>Correo</td><td>Password</td><td style='width: 150px;'>Suscripcion</td><td class='tdButtom'>  </td><td class='tdButtom'>  </td></tr>";
+  "<table><tr class='header'><td style='width: 100px;'>Id</td><td>Nombre Completo</td><td>Correo</td><td>Password</td><td style='width: 150px;'>Suscripcion</td><td style='width: 60px;'>  </td><td style='width: 60px;'>  </td></tr>";
 
 fetch(`http://localhost:9000/api/bodeguero`).then((response) => {
   response.json().then((data) => {
     const bodegueros = data[0];
     for (let item = 0; item < bodegueros.length; item++) {
-      console.log(bodegueros[item]);
+      let nombreURL = bodegueros[item].nombreCompleto.replaceAll(" ", "%");
+      console.log(nombreURL);
+
       //tablaBodeguero.innerHTML+=`<tr><td>"+  ${bodegueros[item].idAdmin + "}</td><td>  ${bodegueros[item].nombreCompleto+"}</td><td>  ${bodegueros[item].password+"}</td><td>  ${bodegueros[item].suscripcion+"</td></tr><br>`;
       tablaBodeguero.innerHTML += `<table>
-=======
-tablaBodeguero.innerHTML="";
-tablaBodeguero.innerHTML+="<table><tr class='header'><td style='width: 100px;'>Id</td><td>Nombre Completo</td><td>Correo</td><td>Password</td><td style='width: 150px;'>Suscripcion</td><td style='width: 60px;'>  </td><td style='width: 60px;'>  </td></tr>"
-
-
-fetch(`http://localhost:9000/api/bodeguero`).then((response) => {
-  response.json().then((data) => {
-        const bodegueros = data[0];
-        for(let item = 0; item < bodegueros.length;item++){
-            let nombreURL = bodegueros[item].nombreCompleto.replaceAll(" ", "%");
-            console.log(nombreURL);
-
-            //tablaBodeguero.innerHTML+=`<tr><td>"+  ${bodegueros[item].idAdmin + "}</td><td>  ${bodegueros[item].nombreCompleto+"}</td><td>  ${bodegueros[item].password+"}</td><td>  ${bodegueros[item].suscripcion+"</td></tr><br>`;
-            tablaBodeguero.innerHTML+=`<table>
->>>>>>> ad01ab77236aeff54fa1fb9fae0d2ff49fff020e
             <tr><td style='width: 100px;'>${bodegueros[item].idAdmin}</td>
             <td>  ${bodegueros[item].nombreCompleto}</td>
             <td>${bodegueros[item].correo}</td>

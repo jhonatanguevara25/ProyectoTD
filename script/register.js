@@ -12,8 +12,7 @@ function registrar() {
     password: passwordOB,
     suscripcion: suscripcionOB,
   };
-*/
-  /*console.log(JSON.stringify(data));
+  console.log(JSON.stringify(data));
   try {
     fetch(`http://localhost:9000/api/bodeguero`, {
       method: "POST", // or 'PUT'
