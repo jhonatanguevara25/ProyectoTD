@@ -40,7 +40,7 @@ routes.post("/", (req, res) => {
     codBarra,
   } = req.body;
   db(
-    `INSERT INTO [dbo].[producto] (idProducto, idCategoria, nombreP, descripcion, precioCosto, precioVentaR, rucProvee, codBarra) VALUES (${idProducto}, ${idCategoria}, '${nombreP}', '${descripcion}', ${precioCosto}, ${precioVentaR}, '${rucProvee}', '${codBarra}')`,
+    `INSERT INTO [dbo].[producto] (idCategoria, nombreP, descripcion, precioCosto, precioVentaR, rucProvee, codBarra) VALUES (${idCategoria}, '${nombreP}', '${descripcion}', ${precioCosto}, ${precioVentaR}, '${rucProvee}', '${codBarra}')`,
     (record) => {
       res.send(record);
     }
