@@ -5,28 +5,7 @@ function registrar() {
   let correoOB = document.getElementById("email").value;
   let passwordOB = document.getElementById("pswd").value;
   let suscripcionOB = document.getElementById("susc").value;
-
-  /*  const data = {
-    nombreCompleto: nombreOB,
-    correo: correoOB,
-    password: passwordOB,
-    suscripcion: suscripcionOB,
-  };
-  console.log(JSON.stringify(data));
-  try {
-    fetch(`http://localhost:9000/api/bodeguero`, {
-      method: "POST", // or 'PUT'
-      headers: {
-        accept: "application/json",
-      },
-      body: JSON.stringify(data),
-    }).then((response) => alert(response.json()));
-  } catch (err) {
-    alert(err);
-  }*/
-  // Example POST method implementation:
   async function postData(url = "", data = {}) {
-    // Default options are marked with *
     const response = await fetch(url, {
       method: "POST", // *GET, POST, PUT, DELETE, etc.
       mode: "cors", // no-cors, *cors, same-origin
