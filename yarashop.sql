@@ -30,7 +30,7 @@ VALUES
 --
 
 CREATE TABLE categoria (
-  idCategoria int NOT NULL,
+  idCategoria int IDENTITY(1,1) NOT NULL,
   nombreCat varchar(256) NOT NULL,
   descripcion varchar(256) NOT NULL
 );
@@ -39,15 +39,15 @@ CREATE TABLE categoria (
 -- Volcado de datos para la tabla categoria
 --
 
-INSERT INTO categoria (idCategoria, nombreCat, descripcion) VALUES
-(1, 'Lácteo', 'Leche, Yogurt, Mantequilla'),
-(2, 'Bebida', 'Gaseosa, Jugos, Agua'),
-(3, 'Embutido', 'Salchicha, Jamonada, Tocino, chorizo'),
-(4, 'Fideo', '-'),
-(5, 'Helado', '-'),
-(6, 'Galleta', '-'),
-(7, 'Chocolate', 'En todas sus presentaciones'),
-(8, 'Salsas y Cremas', 'Salsas, Cremas');
+INSERT INTO categoria (nombreCat, descripcion) VALUES
+('Lácteo', 'Leche, Yogurt, Mantequilla'),
+('Bebida', 'Gaseosa, Jugos, Agua'),
+('Embutido', 'Salchicha, Jamonada, Tocino, chorizo'),
+('Fideo', '-'),
+('Helado', '-'),
+('Galleta', '-'),
+('Chocolate', 'En todas sus presentaciones'),
+('Salsas y Cremas', 'Salsas, Cremas');
 
 -- --------------------------------------------------------
 
@@ -56,8 +56,8 @@ INSERT INTO categoria (idCategoria, nombreCat, descripcion) VALUES
 --
 
 CREATE TABLE producto (
-  idProducto int NOT NULL,
-  idCategoria varchar(256) NOT NULL,
+  idProducto int IDENTITY(1,1) NOT NULL,
+  idCategoria int NOT NULL,
   nombreP varchar(256) NOT NULL,
   descripcion varchar(256) NOT NULL,
   precioCosto decimal(10,2) NOT NULL,
@@ -70,35 +70,35 @@ CREATE TABLE producto (
 -- Volcado de datos para la tabla producto
 --
 
-INSERT INTO producto (idProducto, idCategoria, nombreP, descripcion, precioCosto, precioVentaR, rucProvee, codBarra) VALUES
-(1, '1', 'Leche entera', 'Bolsa x 900 ml', '3.00', '4.00', '20415932376', '2837642837641'),
-(2, '1', 'Mantequilla GLORIA', 'Con Sal Pote 400g', '12.50', '12.00', '20415932376', '6733186733181'),
-(3, '1', 'Leche UHT GLORIA ', 'Sin Lactosa x 1L', '4.80', '5.50', '20415932376', '2977752977751'),
-(4, '1', 'Yogurt Bebible GLORIA', 'Galonera 1.9Kg', '8.50', '9.00', '20415932376', '1587711587711'),
-(5, '1', 'Yogurt Bebible GLORIA ', 'Vainilla Galonera 1.9Kg', '8.50', '9.00', '20415932376', '5468505468502'),
-(6, '1', 'Leche Condensada GLORIA', 'Lata 393g', '4.50', '5.00', '20415932376', '2054452054452'),
-(7, '2', 'Gaseosa COCA COLA Sin Azúcar', 'Botella 1.5L', '4.80', '5.50', '20415932376', '7204167204163'),
-(8, '5', 'Helado PEZIDURI', 'Tricolor Pote 2.2L', '12.80', '13.50', '20263322496', '4241384241381'),
-(9, '6', 'Galletas MOROCHAS', 'Sabor Chocolate', '0.50', '0.70', '20263322496', '1234567890128'),
-(10, '1', 'Leche Condensada NESTLÉ', 'Lata 393g', '5.00', '5.50', '20263322496', '4755484755481'),
-(11, '6', 'Galleta NESTLE MOROCHAS', 'Bolsa 42g', '1.00', '1.40', '20263322496', '3080373080372'),
-(12, '6', 'Galletas Saladas DORÉ', 'Paquete 230g', '4.00', '4.50', '20263322496', '4679881467988'),
-(13, '6', 'Wafer COCOSETTE', 'Sabor a Coco', '0.80', '1.20', '20263322496', '4487934487931'),
-(14, '7', 'Chocolate LENTEJAS', 'Grageas Caja 30g', '0.80', '1.20', '20263322496', '5901234123457'),
-(15, '7', 'Chocolate KIT KAT', 'De leche Paquete 45Gr', '3.50', '4.00', '20263322496', '1485381485381'),
-(16, '7', 'Chocolate SUBLIME Bitter', 'Envoltura 40g', '0.80', '1.50', '20263322496', '4814194814191'),
-(17, '7', 'Chocolate NESTLE Sublime Blanco', 'Sonrisa Envoltura 40g', '1.00', '1.70', '20263322496', '9617769617761'),
-(18, '3', 'Pack SAN FERNANDO Jamón Sándwich + Queso Edam ', 'Paquete 360g', '12.00', '13.00', '20100154308', '2943442943441'),
-(19, '3', 'Nuggets Pechuga de Pollo SAN FERNANDO', 'Caja 24un', '10.50', '11.20', '20100154308', '9024119024111'),
-(20, '3', 'Hot Dog Ahumado de Pollo SAN FERNANDO', 'Paquete 440g', '6.80', '7.50', '20100154308', '9788492808274'),
-(23, '3', 'Salchicha de Pollo SAN FERNANDO', 'Paquete 250g', '3.00', '3.50', '20100154308', '9495589495581'),
-(24, '1', 'Mezcla Láctea LAIVE ', 'Sin Lactosa Caja 480g', '2.80', '3.50', '20100095450', '7734327734321'),
-(25, '1', 'Mantequilla LAIVE', 'con Sal Barra 200g', '8.00', '8.50', '20100095450', '7051767051761'),
-(26, '1', 'Yogurt Griego LAIVE', 'Natural Vaso 500g', '8.00', '8.50', '20100095450', '2121712121711'),
-(27, '1', 'Yogurt LAIVE Kids', 'Fresa Vaso 120g', '1.00', '1.50', '20100095450', '8042358042358'),
-(28, '4', 'Fideos Spaghetti MOLITALIA', 'Bolsa 1Kg', '3.80', '4.50', '20100035121', ''),
-(29, '8', 'Salsa Pomarola MOLITALIA con Hongos y Laurel', 'Doypack 190g', '1.80', '2.50', '20100035121', ''),
-(30, '4', 'Fideos Munición MOLITALIA', 'Bolsa 250g', '1.00', '1.50', '20100035121', '');
+INSERT INTO producto (idCategoria, nombreP, descripcion, precioCosto, precioVentaR, rucProvee, codBarra) VALUES
+('1', 'Leche entera', 'Bolsa x 900 ml', '3.00', '4.00', '20415932376', '2837642837641'),
+('1', 'Mantequilla GLORIA', 'Con Sal Pote 400g', '12.50', '12.00', '20415932376', '6733186733181'),
+('1', 'Leche UHT GLORIA ', 'Sin Lactosa x 1L', '4.80', '5.50', '20415932376', '2977752977751'),
+('1', 'Yogurt Bebible GLORIA', 'Galonera 1.9Kg', '8.50', '9.00', '20415932376', '1587711587711'),
+('1', 'Yogurt Bebible GLORIA ', 'Vainilla Galonera 1.9Kg', '8.50', '9.00', '20415932376', '5468505468502'),
+('1', 'Leche Condensada GLORIA', 'Lata 393g', '4.50', '5.00', '20415932376', '2054452054452'),
+('2', 'Gaseosa COCA COLA Sin Azúcar', 'Botella 1.5L', '4.80', '5.50', '20415932376', '7204167204163'),
+('5', 'Helado PEZIDURI', 'Tricolor Pote 2.2L', '12.80', '13.50', '20263322496', '4241384241381'),
+('6', 'Galletas MOROCHAS', 'Sabor Chocolate', '0.50', '0.70', '20263322496', '1234567890128'),
+('1', 'Leche Condensada NESTLÉ', 'Lata 393g', '5.00', '5.50', '20263322496', '4755484755481'),
+('6', 'Galleta NESTLE MOROCHAS', 'Bolsa 42g', '1.00', '1.40', '20263322496', '3080373080372'),
+('6', 'Galletas Saladas DORÉ', 'Paquete 230g', '4.00', '4.50', '20263322496', '4679881467988'),
+('6', 'Wafer COCOSETTE', 'Sabor a Coco', '0.80', '1.20', '20263322496', '4487934487931'),
+('7', 'Chocolate LENTEJAS', 'Grageas Caja 30g', '0.80', '1.20', '20263322496', '5901234123457'),
+('7', 'Chocolate KIT KAT', 'De leche Paquete 45Gr', '3.50', '4.00', '20263322496', '1485381485381'),
+('7', 'Chocolate SUBLIME Bitter', 'Envoltura 40g', '0.80', '1.50', '20263322496', '4814194814191'),
+('7', 'Chocolate NESTLE Sublime Blanco', 'Sonrisa Envoltura 40g', '1.00', '1.70', '20263322496', '9617769617761'),
+('3', 'Pack SAN FERNANDO Jamón Sándwich + Queso Edam ', 'Paquete 360g', '12.00', '13.00', '20100154308', '2943442943441'),
+('3', 'Nuggets Pechuga de Pollo SAN FERNANDO', 'Caja 24un', '10.50', '11.20', '20100154308', '9024119024111'),
+('3', 'Hot Dog Ahumado de Pollo SAN FERNANDO', 'Paquete 440g', '6.80', '7.50', '20100154308', '9788492808274'),
+('3', 'Salchicha de Pollo SAN FERNANDO', 'Paquete 250g', '3.00', '3.50', '20100154308', '9495589495581'),
+('1', 'Mezcla Láctea LAIVE ', 'Sin Lactosa Caja 480g', '2.80', '3.50', '20100095450', '7734327734321'),
+('1', 'Mantequilla LAIVE', 'con Sal Barra 200g', '8.00', '8.50', '20100095450', '7051767051761'),
+('1', 'Yogurt Griego LAIVE', 'Natural Vaso 500g', '8.00', '8.50', '20100095450', '2121712121711'),
+('1', 'Yogurt LAIVE Kids', 'Fresa Vaso 120g', '1.00', '1.50', '20100095450', '8042358042358'),
+('4', 'Fideos Spaghetti MOLITALIA', 'Bolsa 1Kg', '3.80', '4.50', '20100035121', ''),
+('8', 'Salsa Pomarola MOLITALIA con Hongos y Laurel', 'Doypack 190g', '1.80', '2.50', '20100035121', ''),
+('4', 'Fideos Munición MOLITALIA', 'Bolsa 250g', '1.00', '1.50', '20100035121', '');
 
 
 -- --------------------------------------------------------
@@ -175,8 +175,7 @@ ALTER TABLE categoria
 -- Indices de la tabla producto
 --
 ALTER TABLE producto
-  ADD PRIMARY KEY (idProducto),
-  ADD KEY fk_provee (rucProvee);
+  ADD PRIMARY KEY (idProducto);
 
 --
 -- Indices de la tabla proveedor
@@ -188,8 +187,7 @@ ALTER TABLE proveedor
 -- Indices de la tabla tienda
 --
 ALTER TABLE tienda
-  ADD PRIMARY KEY (idTienda),
-  ADD KEY fk_adm (idAdministrador);
+  ADD PRIMARY KEY (idTienda);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -222,6 +220,9 @@ ALTER TABLE tienda
 --
 ALTER TABLE producto
   ADD CONSTRAINT fk_provee FOREIGN KEY (rucProvee) REFERENCES proveedor (rucProvee) ON DELETE NO ACTION ON UPDATE CASCADE;
+
+ALTER TABLE producto
+  ADD CONSTRAINT fk_catego FOREIGN KEY (idCategoria) REFERENCES categoria (idCategoria) ON DELETE NO ACTION ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla tienda
