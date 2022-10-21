@@ -8,11 +8,11 @@ const express = require("express");
 const routes = express.Router();
 
 routes.get("/:idTienda/:idUsuario/:idProducto/:cantidad/:pago", (req, res) => {
-  const idTienda = req.params.idTienda;
-  const idUsuario = req.params.idUsuario;
+  const idTienda = req.params.idTienda * 1.0;
+  const idUsuario = req.params.idUsuario * 1.0;
   var cantidad = req.params.cantidad * 1.0;
-  const idProducto = req.params.idProducto;
-  const pago = req.params.pago;
+  const idProducto = req.params.idProducto * 1.0;
+  const pago = req.params.pago * 1.0;
 
   async function transaccion() {
     const uri =
